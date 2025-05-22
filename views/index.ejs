@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>💬 XSS Deface Lab</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>💬 Public Comment Board</h1>
+  <form action="/comment" method="POST">
+    <textarea name="comment" rows="4" cols="50" placeholder="Type a comment or hack me..."></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Recent Comments</h2>
+  <div class="comments">
+    <% comments.forEach(comment => { %>
+      <div class="comment"><%- comment %></div> <!-- RAW HTML = XSS -->
+    <% }) %>
+  </div>
+</body>
+</html>

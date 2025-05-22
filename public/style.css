@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background: #f2f2f2;
+  color: #333;
+}
+textarea {
+  width: 100%;
+}
+.comment {
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding: 10px;
+}
